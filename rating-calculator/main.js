@@ -37,15 +37,11 @@ let amount3 = document.getElementById("amount3")
 // listen and collect -> starInputs
 addEventListener("input", calculateFields);
 
-//update fields functions
-
-    // update avg rating
-    // update 1 star servicecols  
-    // update 2 star servicecols  
-    // update 3 star servicecols  
-    // update 4 star servicecols  
-    // update 5 star servicecols  
-    // update output needs message
+//update fields function
+    // copy input values to servicecols 
+    // update servicecols rating avg
+    // update output rating needs
+    // handle NaN in rating avg
 
 function calculateFields (){
     pasteRowValues()
@@ -85,10 +81,9 @@ function calculateFields (){
     handleNan(avgCalcservCol3)
     handleNan(avgCalcservCol2)
     handleNan(avgCalcservCol1)
-
-
 }
 
+// copy input values
 let pasteRowValues = () => {
     servCol1_2s.innerText = twoStarInput.value
     servCol1_3s.innerText = threeStarInput.value
@@ -103,12 +98,14 @@ let pasteRowValues = () => {
     servCol3_5s.innerText = fiveStarInput.value
 }
 
+// calculate rating avg
 let avgRating = (q1, q2, q3, q4, q5) => {
     let avg = (q1 + q2*2 + q3*3 + q4*4 + q5*5)/(q1+q2+q3+q4+q5)
     return avg.toFixed(1)
 }
 
+// handle NaN in rating avg
 let handleNan = field => field.innerText === "NaN" ? field.innerText=0 : null ;
 
 
-//store in session
+//store in session/localstorage
