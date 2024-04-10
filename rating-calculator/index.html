@@ -1,68 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div id="rating-container">
-            <div class="calc-header">Ihr Bewertungs Kalkulator</div>
-            <div class="onthe-grid">
-                <div class="k-item">So könnte Ihr Profil aussehen</div>
-                <div class="k-item small-text mid">Ihre aktuellen Daten</div>
-                <div class="k-item small-text mid">Wenn wir alle 1er löschen</div>
-                <div class="k-item small-text mid">Wenn wir alle 2er löschen</div>
-                <div class="k-item small-text mid">Wenn wir alle 3er löschen</div>
-                <div class="k-item">1 Stern Bewertungen:</div>
-                <div class="k-item mid"><input type="number" class="starInput" id="client-1star" value="0" min="0" max ="999"></div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item">2 Stern Bewertungen:</div>
-                <div class="k-item mid"><input type="number" class="starInput" id="client-2star" value="0" min="0" max ="999"></div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item">3 Stern Bewertungen:</div>
-                <div class="k-item mid"><input type="number" class="starInput" id="client-3star" value="0" min="0" max ="999"></div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item">4 Stern Bewertungen:</div>
-                <div class="k-item mid"><input type="number" class="starInput" id="client-4star" value="0" min="0" max ="999"></div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item">5 Stern Bewertungen:</div>
-                <div class="k-item mid"><input type="number" class="starInput" id="client-5star" value="0" min="0" max ="999"></div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item">&nbsp;</div>
-                <div class="k-item small-text mid">Dies ist ihr aktueller Score</div>
-                <div class="k-item small-text mid">Dies ist ihr Score wenn wir alle 1er löschen</div>
-                <div class="k-item small-text mid">Dies ist ihr Score wenn wir alle 2er löschen</div>
-                <div class="k-item small-text mid">Dies ist ihr Score wenn wir alle 3er löschen</div>
-                <div class="k-item">Bewertungs Durchschnitt:</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div>
-                <div class="k-item mid">0</div> 
-            </div>
-            <div id="output-message">
-                <span class="messHead">Um den besten Score zu erreichen, benötigen Sie folgende Löschungen:
-                <ul>
-                    <li class="messOneStar">1 Stern Löschungen: <span id="amount1">0</span></li>
-                    <li class="messOneStar">2 Stern Löschungen: <span id="amount2">0</span></li>
-                    <li class="messOneStar">3 Stern Löschungen: <span id="amount3">0</span></li>
-                </ul>
-            </span>
-        </div>             
-        </div>
-    </div>
-    <script src="main.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div id="rating-container">
+				<div class="calc-header">Ihr Bewertungs Kalkulator</div>
+				<div class="onthe-grid">
+					<div class="k-item">So verteilen sich Ihre Bewertungen</div>
+					<div class="k-item small-text mid"></div>
+					<div class="k-item small-text nm mid">
+						Wenn wir alle 1-Sterne-Bewertungen löschen
+					</div>
+					<div class="k-item small-text nm mid">
+						Wenn wir alle 1- und 2-Sterne-Bewertungen löschen
+					</div>
+					<div class="k-item small-text nm mid">
+						Wenn wir alle 1-, 2- und 3-Sterne-Bewertungen löschen
+					</div>
+					<div class="k-item">1 Stern Bewertungen:</div>
+					<div class="k-item mid">
+						<input
+							type="number"
+							class="starInput"
+							id="client-1star"
+							value="0"
+							min="0"
+							max="999"
+						/>
+					</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item">2 Stern Bewertungen:</div>
+					<div class="k-item mid">
+						<input
+							type="number"
+							class="starInput"
+							id="client-2star"
+							value="0"
+							min="0"
+							max="999"
+						/>
+					</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item">3 Stern Bewertungen:</div>
+					<div class="k-item mid">
+						<input
+							type="number"
+							class="starInput"
+							id="client-3star"
+							value="0"
+							min="0"
+							max="999"
+						/>
+					</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item">4 Stern Bewertungen:</div>
+					<div class="k-item mid">
+						<input
+							type="number"
+							class="starInput"
+							id="client-4star"
+							value="0"
+							min="0"
+							max="999"
+						/>
+					</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item">5 Stern Bewertungen:</div>
+					<div class="k-item mid">
+						<input
+							type="number"
+							class="starInput"
+							id="client-5star"
+							value="0"
+							min="0"
+							max="999"
+						/>
+					</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item">&nbsp;</div>
+					<div class="k-item small-text mid">Dies ist ihr aktueller Score</div>
+					<div class="k-item nm small-text mid">Dies ist ihr neuer Score</div>
+					<div class="k-item nm small-text mid">Dies ist ihr neuer Score</div>
+					<div class="k-item nm small-text mid">Dies ist ihr neuer Score</div>
+					<div class="k-item">Bewertungs Durchschnitt:</div>
+					<div class="k-item mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+					<div class="k-item nm mid">0</div>
+				</div>
+				<div class="mobile-ratings">
+					<div class="one-star-del">
+						Wenn wir alle 1-Sterne-Bewertungen löschen,<br />
+						beträgt Ihr neuer Score:
+						<div id="mob1">0</div>
+					</div>
+					<div class="one-star-del">
+						Wenn wir alle 1- und 2-Sterne-Bewertungen löschen,<br />
+						beträgt Ihr neuer Score:
+						<div id="mob2">0</div>
+					</div>
+					<div class="one-star-del">
+						Wenn wir alle 1-, 2- und 3-Sterne-Bewertungen löschen,<br />
+						beträgt Ihr neuer Score:
+						<div id="mob3">0</div>
+					</div>
+				</div>
+				<div id="output-message">
+					<span class="messHead"
+						>Um den besten Score zu erreichen, benötigen Sie folgende
+						Löschungen:
+						<ul>
+							<li class="messOneStar">
+								1 Stern Löschungen: <span id="amount1">0</span>
+							</li>
+							<li class="messOneStar">
+								2 Stern Löschungen: <span id="amount2">0</span>
+							</li>
+							<li class="messOneStar">
+								3 Stern Löschungen: <span id="amount3">0</span>
+							</li>
+						</ul>
+					</span>
+				</div>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
 </html>
