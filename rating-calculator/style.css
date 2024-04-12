@@ -1,20 +1,9 @@
-* {
+/* * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Roboto";
-}
-
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-div {
-	border: lightgrey solid 1px;
-	padding: 1rem;
-}
+} */
 
 ul {
 	padding-left: 16px;

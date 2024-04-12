@@ -84,6 +84,10 @@ function calculateFields() {
 	handleNan(avgCalcservCol3);
 	handleNan(avgCalcservCol2);
 	handleNan(avgCalcservCol1);
+
+	mobCol1.innerText = avgCalcservCol1.innerText;
+	mobCol2.innerText = avgCalcservCol2.innerText;
+	mobCol3.innerText = avgCalcservCol3.innerText;
 }
 
 // copy input values
